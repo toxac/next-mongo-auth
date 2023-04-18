@@ -1,2 +1,2 @@
-# Demo and Starter for Authentication in NextJS with MongoDB as Database
+# Sample/Starter: Authentication in NextJS with MongoDB 
 
