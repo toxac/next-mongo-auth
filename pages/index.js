@@ -1,29 +1,33 @@
 import Head from 'next/head'
 import Image from 'next/image'
-
-import styles from '../styles/Home.module.css'
+import GoogleIcon from '../assets/google.svg'
+import GithubIcon from '../assets/github.svg'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Mongo Next Auth</title>
         <meta name="description" content="Mongo-Next Auth" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="w-screen h-screen flex flex-col items-center justify-center">
-        <h1 className="text-2xl text-center">
-          Authentication<br/>NextJS-MongoDB
+      <div className="w-full h-screen flex flex-col justify-center items-center ">
+        <h1 className="text-4xl font-bold text-center mb-6">
+          Nextjs-Mongodb<br/><span className="text-cyan-400">Authentication</span>
         </h1>
 
-        <div className="flex flex-col w-1/3">
-          <div className="bg-black text-slate-400 hover:text-slate-50 hover:rounded-full px-2 py-4">
-
+        <div className="flex flex-col w-1/4 space-y-2">
+          <div className="bg-black  rounded-md hover:rounded-full px-4 py-2 text-center drop-shadow-lg flex justify-center items-center space-x-2">
+              <Image src={GoogleIcon} className='w-5 h-5 text-white'/>
+              <p className="text-sm font-semibold text-slate-200 hover:text-slate-50">SIGNIN WITH GOOGLE</p>
           </div>
-
+          <div className="bg-black  rounded-md hover:rounded-full px-4 py-2 text-center drop-shadow-lg flex justify-center items-center space-x-2">
+            <Image src={GithubIcon} className='w-5 h-5 text-white'/>
+            <p className="text-sm font-semibold text-slate-200 hover:text-slate-50">SIGNIN WITH GITHUB</p>
+          </div>
         </div>
-      </main>
+      </div>
 
     </div>
   )
