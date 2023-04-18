@@ -28,7 +28,7 @@ export default function Home() {
       </Head>
 
       <div className="w-full h-screen flex flex-col justify-center items-center bg-white ">
-        <h1 className="text-4xl font-bold text-center mb-6">
+        <h1 className="text-4xl font-bold text-center mb-8">
           Nextjs-Mongodb<br/><span className="text-teal-500">Authentication</span>
         </h1>
         <div className="flex flex-col w-1/4 space-y-2 mb-6">
