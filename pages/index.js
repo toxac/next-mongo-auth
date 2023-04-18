@@ -8,13 +8,13 @@ export default function Home() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
-  const handleSignInWithEmail = async()=>{
+  const handleSignInWithEmail = ()=>{
     alert(JSON.stringify({email, password}, 2, null))
   }
-  const handleSignInWithGoogle =async()=>{
+  const handleSignInWithGoogle =()=>{
     alert("Google")
   }
-  const handleSignInWithGithub = async()=>{
+  const handleSignInWithGithub = ()=>{
     alert("Github")
   }
 
@@ -47,28 +47,28 @@ export default function Home() {
             onChange={(e)=> setPassword(e.target.value)} 
             placeholder='Password' 
           />
-          <div className="bg-black  rounded-md hover:rounded-full px-4 py-2 text-center drop-shadow-lg flex justify-center items-center space-x-2 mb-2">
+          <button className="bg-black  rounded-md hover:rounded-full px-4 py-2 text-center drop-shadow-lg flex justify-center items-center space-x-2 mb-2" onClick={handleSignInWithEmail}>
               <Image src={GoogleIcon} className='w-5 h-5 text-white'/>
-              <button className="text-sm font-semibold text-slate-200 hover:text-slate-50" onClick={handleSignInWithEmail}>
+              <p className="text-sm font-semibold text-slate-200 hover:text-slate-50">
                 SIGNIN WITH EMAIL
-              </button>
-          </div>
+              </p>
+          </button>
           <hr/>
         </div>
 
         <div className="flex flex-col w-1/4 space-y-2">
-          <div className="bg-black  rounded-md hover:rounded-full px-4 py-2 text-center drop-shadow-lg flex justify-center items-center space-x-2">
+          <button className="bg-black  rounded-md hover:rounded-full px-4 py-2 text-center drop-shadow-lg flex justify-center items-center space-x-2" onClick={handleSignInWithGoogle}>
               <Image src={GoogleIcon} className='w-5 h-5 text-white'/>
-              <button className="text-sm font-semibold text-slate-200 hover:text-slate-50" onClick={handleSignInWithGoogle}>
+              <p className="text-sm font-semibold text-slate-200 hover:text-slate-50">
                 SIGNIN WITH GOOGLE
-              </button>
-          </div>
-          <div className="bg-black  rounded-md hover:rounded-full px-4 py-2 text-center drop-shadow-lg flex justify-center items-center space-x-2">
+              </p>
+          </button>
+          <button className="bg-black  rounded-md hover:rounded-full px-4 py-2 text-center drop-shadow-lg flex justify-center items-center space-x-2" onClick={handleSignInWithGithub}>
             <Image src={GithubIcon} className='w-5 h-5 text-white'/>
-            <button className="text-sm font-semibold text-slate-200 hover:text-slate-50" onClick={handleSignInWithGithub}>
+            <p className="text-sm font-semibold text-slate-200 hover:text-slate-50">
               SIGNIN WITH GITHUB
-            </button>
-          </div>
+            </p>
+          </button>
         </div>
       </div>
 
